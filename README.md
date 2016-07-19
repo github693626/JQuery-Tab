@@ -1,6 +1,7 @@
 # JQuery 頁籤效果
 
 HTML:
+<code>
   <!--Blue style-->
 	<div class="tab">
         <ul class="tabNav">
@@ -29,7 +30,8 @@ HTML:
             <li>內容3</li>
         </ul>
   </div><!--tab-->
-  
+</code>  
+
   CSS:
 	 ul{margin:0;padding:0; list-style-type:none;}
 	.tab{ margin-bottom: 14px;}
