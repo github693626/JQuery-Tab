@@ -1,5 +1,8 @@
 # JQuery 頁籤效果
 
+##載入JQuery
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 ##HTML:
 
     <!--Blue style-->
@@ -29,7 +32,7 @@
             <li>內容2</li>
             <li>內容3</li>
         </ul>
-    </div><!--tab-->`
+    </div><!--tab-->
 
 ##CSS:
 	 ul{margin:0;padding:0; list-style-type:none;}
