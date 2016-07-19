@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<meta name="title" content="">
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+<link rel="image_src" href="">
+<meta property="og:title" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:description" content="">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]--> 
+<style>
+	ul{margin:0;padding:0; list-style-type:none;}
+
+	.tab{ margin-bottom: 14px;}
+	.tab .tabNav{ overflow:auto; background:#D6D6D6 ;}
+	.tab .tabNav>li{ float: left; width: 33.3333333333%;}
+	.tab .tabNav>li a{ display: block; padding: 10px 0; text-align: center;  }
+	.tab .tabNav>li a:hover{ background: #bbb; }
+	.tab .tabNav>li.active a{ background:#0C5EB2; color: #fff;}
+	.tab a{text-decoration: none; color: inherit;}
+	.tab .tabContainer{ overflow: auto;   }
+	.tab .tabContainer>li{ width: 92%; min-height:180px; padding: 10px 4%; background: #efefef; }
+
+	.pinkTab .tabNav>li.active a{ background:#E782B5;}
+	
+</style>
+</head>
+<body>
+	
+	<div class="tab">
+        <ul class="tabNav">
+            <li><a href="#">選項1</a></li>
+            <li><a href="#">選項2</a></li>
+             <li><a href="#">選項3</a></li>
+        </ul>    
+        <ul class="tabContainer">
+            <li>內容1</li>
+            <li>內容2</li>
+            <li>內容3</li>
+        </ul>
+    </div><!--tab-->
+	
+	
+
+    <div class="tab pinkTab">
+        <ul class="tabNav">
+            <li><a href="#">選項1</a></li>
+            <li><a href="#">選項2</a></li>
+             <li><a href="#">選項3</a></li>
+        </ul>    
+        <ul class="tabContainer">
+            <li>內容1</li>
+            <li>內容2</li>
+            <li>內容3</li>
+        </ul>
+    </div><!--tab-->
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><!--1.7以上-->
+<script type="text/javascript">
+
+$(function(){
+
+		
+	$('.tabContainer>li').not(':first-child').hide();
+	$('.tabNav>li:first-child').addClass('active');
+	$('.tabNav a').click(function() {
+		var $this = $(this),
+			$tabContainer = $this.parents('.tabNav').siblings('.tabContainer'),
+			$tabContainerLi	= $tabContainer.children('li'),
+			_index = $this.parent().index();
+		$this.parent().addClass('active').siblings().removeClass('active');
+		$tabContainerLi.eq(_index).show().siblings().hide();
+		return false;
+	});
+	
+});
+</script>
+</body>
+</html>
